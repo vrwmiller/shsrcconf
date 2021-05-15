@@ -21,7 +21,7 @@ CONFFILE="config.conf"
 [ $PENV ] && \
   # decrypt the password
   passwd="`echo $password | openssl base64 -d | \
-  openssl enc -d -aes-256-cbc -k $PENV`"
+  openssl enc -d -aes-256-cbc -pass env:PENV`"
 
 echo "User: $username"
 echo "Encrypted pass: $password"
