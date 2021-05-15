@@ -2,7 +2,7 @@
 #
 # PENV is a plain text key=value pair used to encrypt and decrypt the
 # aes-256-cbc encrypted string. It can be specified in the config or in the
-# environment
+# environment. It should be appropriately exported.
 #
 # Add the file below to .gitignore. Set its permissions on disk to 0400.
 # Get a aes-256-cbc encrypted password thusly:
@@ -11,9 +11,9 @@
 #
 # Files structure is:
 #
-# PENV=""     # plain text
-# username="" # plain text
-# password="" # aes-256-cbc encrypted password
+# export PENV="" # plain text
+# username=""    # plain text
+# password=""    # aes-256-cbc encrypted password
 #
 CONFFILE="config.conf"
 . $CONFFILE
